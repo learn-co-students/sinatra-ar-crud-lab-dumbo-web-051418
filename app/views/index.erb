@@ -1,0 +1,8 @@
+<h1>Blog Posts</h1>
+
+<% Post.all.each do |post| %>
+<p>
+Name: <%= post.name%><br/>
+Post: <%= post.content%><br/>
+</p>
+<% end %>
