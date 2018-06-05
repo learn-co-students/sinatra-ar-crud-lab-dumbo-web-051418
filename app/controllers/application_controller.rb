@@ -37,8 +37,8 @@ class ApplicationController < Sinatra::Base
     param_copy = params.dup
     param_copy.delete "id"
     param_copy.delete "_method"
-    Post.update(param_copy)
-    redirect '/posts'
+    Post.find(params[:id]).update(param_copy)
+    redirect "/posts/#{params[:id]}"
   end
 
   delete "/posts/:id" do

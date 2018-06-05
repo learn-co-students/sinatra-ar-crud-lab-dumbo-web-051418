@@ -1,6 +1,8 @@
-Name: <%= @post.name %><br/>
-Content: <%= @post.content %><br/>
-
+<h1><%= @post.name %></h1><br/>
+<%= @post.content %><br/>
+<br/>
+<a href="/posts/<%=@post.id%>/edit">Edit this Post</a> | <a href="/posts">Back to All Posts</a>
+<br/>
 <form action="/posts/<%= @post.id %>" method="post">
   <input type="hidden" name="_method" value="delete" id="hidden"/>
   <button type="submit" id="delete">delete</button>

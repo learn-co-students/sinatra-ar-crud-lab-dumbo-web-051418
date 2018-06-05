@@ -1,8 +1,14 @@
 <h1>Blog Posts</h1>
 
+<a href="/posts/new">Create New Post</a><br/><br/>
+
+<% if Post.all.count > 0 %>
 <% Post.all.each do |post| %>
 <p>
-Name: <%= post.name%><br/>
-Post: <%= post.content%><br/>
+<a href="/posts/<%= post.id%>"><%= post.name%></a><br/>
+<%= post.content%><br/>
 </p>
+<% end %>
+<% else %>
+<em>There exists no posts.</em>
 <% end %>
