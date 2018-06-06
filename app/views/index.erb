@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BLOGS R US</title>
+  </head>
+  <body>
+    <h1>We Are Blogs</h1>
+    <%@posts.each do |post|%>
+    <li><%=post.name%><%=post.content%></li>
+    <%end%>
+
+    <!-- <a href="/new">Create a new post</a> -->
+  </body>
+</html>
