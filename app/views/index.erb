@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul><% @posts.map do |post| %>
+      <li><a href="/posts/<%= post.id %>"><%=post.name %><%=post.content%></a></li>
+    <% end %>
+  </ul>
+  </body>
+</html>
