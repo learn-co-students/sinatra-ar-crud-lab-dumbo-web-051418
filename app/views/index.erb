@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <% @posts.each do |post| %>
+    <li><a href="/posts/<%= post.id %>"><%= post.name %></a>
+        <p><%=post.content%></p></li>
+      <% end %>
+    </ul>
+  <form action="/posts/new" method="GET">
+  <input type="submit" value="New Post"/>
+  </form>
+  </body>
+</html>

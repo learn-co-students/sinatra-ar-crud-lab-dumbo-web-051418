@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form  action="/posts/<%=@post.id%>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch"/>
+      <p><input type="text" name="name" value="<%=@post.name%>"/></p>
+      <p><textarea name="content" ><%=@post.content%></textarea></p>
+      <p><input type="submit" value="Edit Post" id="submit"/>
+    </form>
+
+  </body>
+</html>
